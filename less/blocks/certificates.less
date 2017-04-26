@@ -1,0 +1,84 @@
+.certificates {
+
+  &__item {
+    box-sizing: border-box;
+    margin: 0 auto 50px;
+    padding: 10px;
+    background-color: #efefef;
+    border-radius: 10px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    margin: 0 auto 20px;
+
+    & img {
+      vertical-align: middle;
+    }
+
+    & img:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__description {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    transition: all .2s ease;
+    color: #43484c;
+
+    &:hover {
+      color: #693f7e;
+      text-decoration: underline;
+    }
+  }
+
+  @media @mobile-width-only {
+
+    &__img {
+      margin: 0 auto 15px;
+    }
+  }
+
+  @media @tablet-width {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 310px;
+      margin: 0 0 50px;
+    }
+
+    &__description {
+      //font-family: HelveticaNeueCyr-light,Arial,sans-serif;
+      font-size: 18px;
+
+      span {
+        //font-family: HelveticaNeueCyr,Arial,sans-serif;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    width: 730px;
+    margin: 0 auto;
+  }
+
+  @media @desktop-width {
+    width: auto;
+
+    &__item:last-child {
+      margin: 0 auto;
+    }
+
+    &__description {
+      font-size: 19px;
+    }
+  }
+}

@@ -1,0 +1,150 @@
+.page-header {
+  margin-bottom: 50px;
+  padding: 30px 0 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 5px 2px #efefef;
+
+  &__container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    margin: 0 auto;
+    .clearfix();
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 400;
+  }
+
+  &__nav {
+    width: 190px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &__nav-item {
+    display: inline-block;
+    margin-bottom: 15px;
+    vertical-align: top;
+    list-style: none;
+
+    &:hover {
+      border-bottom: 1px solid #ec4b7f;
+    }
+
+    &:hover a {
+      transition: all 0.1s ease;
+      color: #ec4b7f;
+    }
+
+    &--active {
+      border-bottom: 1px solid #693f7e;
+
+      &:hover {
+        border-bottom: 1px solid #693f7e;
+      }
+
+      &:hover a {
+        color: #43484c;
+      }
+    }
+
+    & a {
+      color: #43484c;
+    }
+  }
+
+  @media @mobile-width-only {
+
+    &__container {
+      width: 310px;
+    }
+
+    &__title {
+      margin: 0 auto 20px;
+      text-align: center;
+    }
+
+    &__nav-item {
+
+      &:nth-child(odd) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  @media @tablet-width {
+
+    &__container {
+      width: 740px;
+    }
+
+    &__title {
+      float: right;
+      max-width: 350px;
+      margin: 0;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__nav {
+      float: left;
+      width: auto;
+      max-width: 300px;
+    }
+
+    &__nav-item {
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+
+    &__container {
+      width: 960px;
+    }
+
+    &__container--projects {
+      width: 800px;
+    }
+
+    &__nav {
+      max-width: 380px;
+    }
+
+    &__nav-item {
+      max-width: 170px;
+    }
+  }
+
+  @media @desktop-width {
+
+    &__container {
+      width: 1160px;
+    }
+
+    &__container--projects {
+      width: 1140px;
+    }
+
+    &__title {
+      max-width: 450px;
+    }
+
+    &__nav {
+      max-width: 600px;
+    }
+
+    &__nav-item {
+      max-width: 280px;
+    }
+  }
+}

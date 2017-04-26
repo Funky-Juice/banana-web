@@ -1,0 +1,135 @@
+.projects {
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    margin: 0 auto 40px;
+    border-bottom: 5px solid #ec4b7f;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 5px 2px #efefef;
+  }
+
+  &__img-wrap {
+    position: relative;
+    flex-shrink: 0;
+    padding: 20px;
+    border-bottom: 1px solid #dedede;
+
+    &:hover .projects__dropdown-link {
+      opacity: 1;
+    }
+  }
+
+  &__dropdown-link {
+    width: 100%;
+    height: 100%;
+    background: rgba(105, 63, 126, .95);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    border-radius: 12px 12px 0 0;
+    opacity: 0;
+    transition: all .2s ease;
+    text-align: center;
+
+    & span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      padding-bottom: 5px;
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+  }
+
+  &__title-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: HelveticaNeueCyr-light,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.15;
+    color: #693f7e;
+    transition: all .2s ease;
+
+    &:hover {
+      color: #ec4b7f;
+      text-decoration: underline;
+    }
+  }
+
+  &__description {
+    margin: auto 0 0;
+    font-family: HelveticaNeueCyr-light,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &__description-link {
+    display: block;
+    margin-bottom: 15px;
+    font-family: HelveticaNeueCyr-light,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    transition: all .2s ease;
+    word-wrap: break-word;
+    color: #693f7e;
+
+    &:hover {
+      color: #ec4b7f;
+      text-decoration: underline;
+    }
+  }
+
+  &__date {
+    font-family: HelveticaNeueCyr-light,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    color: #888;
+  }
+
+  @media @mobile-width-only {
+
+  }
+
+  @media @tablet-width {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 750px;
+    margin: 0 auto;
+
+    &__item {
+      width: 340px;
+    }
+
+    &__title-link {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    width: 870px;
+  }
+
+  @media @desktop-width {
+    width: 1170px;
+
+    &__item {
+      margin: 0 auto 60px;
+    }
+  }
+}

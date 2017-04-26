@@ -1,0 +1,29 @@
+.index-page-main {
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border-bottom: 5px solid #ec4b7f;
+  box-shadow: 0 4px 5px 2px #efefef;
+
+  @media @mobile-width-only {
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 0 15px 10px;
+  }
+
+  @media @tablet-width {
+    box-sizing: border-box;
+    width: 720px;
+    margin: 0 auto;
+    padding: 60px 35px 40px;
+  }
+
+  @media (min-width: 992px) {
+    width: 940px;
+  }
+
+  @media @desktop-width {
+    width: 1140px;
+    padding: 60px 40px;
+  }
+}
